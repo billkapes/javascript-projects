@@ -19,6 +19,7 @@ let preparedForLiftOff = true;
 
 // add logic below to verify total number of astronauts for shuttle launch does not exceed 7
 let result = false;
+
 if (astronautCount <= 7) 
     if (astronautStatus === "ready")
         if (totalMassKg < maximumMassLimit)
@@ -38,7 +39,7 @@ console.log("Crew Mass:", crewMassKg);
 console.log("Fuel Mass:", fuelMassKg);
 console.log("Shuttle Mass:", shuttleMassKg);
 console.log("Total Mass:", totalMassKg);
-console.log("Fuel Temperate:", fuelTempCelsius);
+console.log("Fuel Temperate:", fuelTempCelsius, "°C");
 console.log("Weather Status:", weatherStatus);
 console.log("--------------------------------------------------------------")
 if (result) {
