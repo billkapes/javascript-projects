@@ -12,7 +12,7 @@ function reverseCharacters(stringToReverse) {
     if (typeof stringToReverse === "string") {
         return stringToReverse.split('').reverse().join('');
     } else if (typeof stringToReverse === "number") {
-        return String(stringToReverse).split('').reverse().join('');
+        return Number(String(stringToReverse).split('').reverse().join(''));
     }
 }
 
