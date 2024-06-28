@@ -24,9 +24,36 @@ let cargoHold = ['meal kits', 'space suits', 'first-aid kit', 'satellite', 'gold
 console.log("Fuel level: " + checkFuel(fuelLevel));
 console.log("Hold status: " + holdStatus(cargoHold));
 
+let fuelTankInspection = function(fuelTank) {
+  if (checkFuel(fuelTank) === "green") {
+    return fuelTank - 100001
+  } else if (checkFuel(fuelTank) === "yellow") {
+    return fuelTank - 50001;
+  } else {
+    return fuelTank;
+  }
+}
+
+let cargoInspect = function(cargoArr) {
+  let newArr = [];
+  newArr.push(cargoArr[4]);
+  cargoArr[4] = "foolsGold";
+  newArr.push(cargoArr[6]);
+  cargoArr[6] = "BF-24 unit";
+
+  return newArr;
+}
+
+let irs = function(fuel, cargo) {
+  let gloveBox = cargoInspect(cargo);
+  return `Raided ${fuelTankInspection(fuel)} kg of fuel from the tanks, and stole ${gloveBox[0]} and ${gloveBox[1]} from cargo hold.`;
+}
+
+console.log(irs(fuelLevel, cargoHold));
+
 /* Steal some fuel from the shuttle:
  * /
- 
+
 //a). Define an anonymous function and set it equal to a variable with a normal, non-suspicious name. The function takes one parameter. This will be the fuel level on the shuttle.
 
 //b). You must siphon off fuel without alerting the TAs. Inside your function, you want to reduce the fuel level as much as possible WITHOUT changing the color returned by the checkFuel function.
@@ -54,4 +81,4 @@ console.log("Hold status: " + holdStatus(cargoHold));
 //b). Call your anonymous fuel and cargo functions from within irs.
 
 //c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
-
+*/
