@@ -1,8 +1,12 @@
 // Code your orbitCircumference function here:
-
+function getCircumference(orbit) {
+  return Math.round(2 * Math.PI * orbit);
+}
 
 // Code your missionDuration function here:
-
+function missionDuration(numOfOrbits, orbitRadius = 2000, orbitalSpeed = 28000) {
+  return (orbitRadius / orbitalSpeed) * numOfOrbits;
+}
 
 // Copy/paste your selectRandomEntry function here:
 
