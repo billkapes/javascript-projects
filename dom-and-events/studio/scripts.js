@@ -10,6 +10,7 @@ window.addEventListener("load", function() {
             document.getElementById("spaceShuttleHeight").innerHTML = 10000;
        }
     });
+
     let landButton = this.document.getElementById("landing");
     landButton.addEventListener("click", function(event) {
         window.alert("The shuttle is landing. Landing gear engaged.");
@@ -18,6 +19,7 @@ window.addEventListener("load", function() {
         document.getElementById("spaceShuttleHeight").innerHTML = 0;
 
     });
+    
     let abortButton = this.document.getElementById("missionAbort");
     abortButton.addEventListener("click" , function(event) {
         let answer = window.confirm("Confirm that you want to abort the mission.");
